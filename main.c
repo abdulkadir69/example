@@ -3,35 +3,17 @@
 
 int main()
 {
-    int a,b,c,para = 1000;;
-    printf("Hangi islemi yapmak istiyorsunuz :\nHesaptaki paraniz:1000\n1. Hesaba para yatirma\n2. Hesaptan para cekme\n3. Iptal\n ");
-    scanf("%d",&a);
-    if (a==1)
+    float a,b;
+    printf("kac dk konustu:");
+    scanf("%f",&a);
+    if(a<=3)
     {
-        printf("Ne kadar yatirmak istiyorsunuz:\n");
-        scanf("%d",&b);
-        printf("Hesabinizdaki para : %d",para+b);
-    }
-    else if (a==2)
-    {
-        printf("Ne kadar para cekmek istiyorsunuz :");
-        scanf("%d",&c);
-        if (c <= para)
-        {
-        printf("hesabininzdaki para : %d",para-c);
-        }
-        else
-        {
-            printf("fazla mikarda para girdiniz");
-        }
-    }
-    else if (a==3)
-    {
-        printf("iyi gunler dileriz :)");
+        printf("ucreti : 0.25 TL");
     }
     else
     {
-        printf("yanlis sayi girdiniz");
+        b=(a-3)*0.08+0.25;
+        printf("ucreti : %f",b);
     }
     return 0;
 }
